@@ -1,0 +1,239 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+  background-color: #eee;
+}
+/* general styles */
+:root {
+  --bkg-color: #f8f8ff;
+  --logo-color: #1e90ff;
+  --white-color: #ffffff;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  background: var(--bkg-color);
+  background-color: #eee;
+}
+img {
+  width: 100%;
+}
+p,
+h2,
+h3 {
+  margin: 0;
+}
+a {
+  text-decoration: none;
+}
+
+/* logo styles */
+header {
+  padding: 1.5em;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+.logo {
+  font-size: 1.6rem;
+  font-weight: bold;
+  margin: 0;
+  line-height: 110%;
+}
+/* hero section */
+.hero {
+  display: grid;
+  place-items: center;
+  margin-bottom: 1em;
+}
+.card {
+  min-width: 250px;
+  max-width: 400px;
+  padding: 2em;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  border-radius: 0px;
+  text-align: center;
+  border: 1px lightgray solid;
+}
+.card__avatar {
+  width: 150px;
+  height: 150px;
+  border-radius: 20%;
+  object-fit: cover;
+  align-self: center;
+}
+.card__name {
+  font-weight: 600;
+  font-size: 1rem;
+  text-transform: capitalize;
+}
+.card__title {
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+.card__flex {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 5px;
+}
+.location {
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+.card__desc {
+  line-height: 1.8;
+  padding: 1em;
+  font-size: 14px;
+  font-weight: 300;
+  border-top: 1px solid lightgrey;
+  border-bottom: 1px solid lightgrey;
+  text-align: left;
+}
+.card__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  padding: 0.5em;
+  color: var(--white-color);
+  background: var(--logo-color);
+  border-radius: 6px;
+  text-transform: uppercase;
+  font-size: 1rem;
+  transition: background 0.3s;
+}
+.card__link:hover {
+  background: #0e5db9;
+  color: white;
+}
+
+/* My stack */
+
+.stack {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 3em;
+  align-content: center;
+  margin-bottom: 5em;
+  max-width: 500px;
+}
+.stack h2,
+.project_indicator {
+  text-align: center;
+  padding: 0.5em;
+  text-transform: uppercase;
+  border: 1px solid lightgray;
+  border-left: none;
+  border-right: none;
+}
+.project_indicator {
+  width: 100%;
+}
+.tech-icon {
+  height: 60px;
+  max-width: 60px;
+  border-radius: 6px;
+  padding: 0.5em;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+.stack__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1em;
+}
+
+.social {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 1em 0;
+  background: lightgrey;
+}
+.social__container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 300px;
+  margin: 0 auto;
+}
+.social_link {
+  cursor: pointer;
+}
+main {
+  padding: 2em 1em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  flex-direction: column;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* project styles */
+.projects {
+  padding: 1em 0;
+  gap: 1em;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+.project {
+  padding: 1em;
+  border-radius: 6px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  text-align: center;
+}
+
+.title {
+  font-weight: bold;
+  margin: 0 auto;
+  margin-bottom: 0.5em;
+  padding-bottom: 0.5em;
+  border-bottom: 1px solid;
+  width: fit-content;
+  text-transform: capitalize;
+}
+.description {
+  line-height: 1.4;
+  margin-bottom: 0.5em;
+  font-weight: 300;
+}
+.project a {
+  border: 1px solid;
+  padding: 0.5em 1em;
+  display: inline-block;
+  width: 90px;
+  border-radius: 4px;
+  color: white;
+  text-align: center;
+  cursor: pointer;
+  font-weight: bold;
+  background: #1e90ff;
+  transition: all 0.3s;
+}
+.project a:nth-of-type(2) {
+  margin-left: 2em;
+  background: limegreen;
+}
+.project a:hover {
+  background: #0e5db9;
+  transform: scale(0.97);
+}
+/* media queries */
+@media screen and (min-width: 1000px) {
+  .flex-row {
+    display: flex;
+    flex-direction: row;
+    gap: 3em;
+    justify-content: space-between;
+  }
+}
