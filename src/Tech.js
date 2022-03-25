@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React from "react";
 import ReactTooltip from "react-tooltip";
 
 export default function Tech({ techTitle, toolTip }) {
@@ -15,6 +15,7 @@ export default function Tech({ techTitle, toolTip }) {
         <>
           <img
             className="tech-icon"
+            alt={`${techTitle}`}
             data-for="toolTip"
             data-tip={toolTip}
             onError={addDifferentImg}

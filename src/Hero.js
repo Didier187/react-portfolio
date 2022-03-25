@@ -14,7 +14,10 @@ export default function Hero({
       <div className="card">
         <img
           src={avatarUrl}
-          alt={`${name}'s photo`}
+          width="150"
+          height="150"
+          layout="responsive"
+          alt="avatar"
           className="card__avatar"
         />
         <p className="card__name">{name}</p>
