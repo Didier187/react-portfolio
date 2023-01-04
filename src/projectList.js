@@ -41,9 +41,11 @@ export const projects=[
 ]
 
 export const techArr = [
+    "typescript",
     "mongodb",
     "express",
     "react",
+    "nextjs",
     "nodejs",
     "javascript",
     "html5",
@@ -55,7 +57,9 @@ export const techArr = [
     "github",
     "vscode",
     "google",
+    "firebase",
     "jest",
     "redux",
     "handlebars",
+    "eslint",
   ];

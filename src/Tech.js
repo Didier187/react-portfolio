@@ -1,23 +1,24 @@
 import React from "react";
 import ReactTooltip from "react-tooltip";
 
-export default function Tech({ techTitle, toolTip }) {
+export default function Tech(props) {
+  const tech = props.tech;
+  console.log(props.tech);
   let imageSrc =
-    `https://cdn.jsdelivr.net/gh/devicons/devicon/icons/${techTitle}/${techTitle}-original.svg` &&
-    `https://cdn.jsdelivr.net/gh/devicons/devicon/icons/${techTitle}/${techTitle}-original.svg`;
+    `https://cdn.jsdelivr.net/gh/devicons/devicon/icons/${tech}/${tech}-original.svg` &&
+    `https://cdn.jsdelivr.net/gh/devicons/devicon/icons/${tech}/${tech}-original.svg`;
   function addDifferentImg(event) {
-    event.target.src = `https://cdn.jsdelivr.net/gh/devicons/devicon/icons/${techTitle}/${techTitle}-plain.svg`;
+    event.target.src = `https://cdn.jsdelivr.net/gh/devicons/devicon/icons/${tech}/${tech}-plain.svg`;
   }
-
   return (
     <>
       {imageSrc && (
         <>
           <img
             className="tech-icon"
-            alt={`${techTitle}`}
+            alt={`${tech}`}
             data-for="toolTip"
-            data-tip={toolTip}
+            data-tip={tech}
             onError={addDifferentImg}
             src={imageSrc}
           />

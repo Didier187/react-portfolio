@@ -1,38 +1,86 @@
-import React from "react";
-import Header from "./Header";
-import Hero from "./Hero";
-import Container from "./Container";
-import Tech from "./Tech";
-import Social from "./Social";
+import React, { useEffect, useState } from "react";
+import About from "./About";
 import Projects from "./Projects";
+import ContactMe from "./ContactMe";
 import avatar from "./images/avatar.jpg";
-import  {techArr} from "./projectList";
-
 export default function App() {
+  const [darkMode, setDarkMode] = useState(false);
 
-  const techContent = techArr.map((tech, index) => (
-    <Tech key={index} techTitle={tech} toolTip={tech} />
-  ));
+  const [tabs, setTabs] = useState([
+    {
+      id: 1,
+      title: "About",
+      Component: <About />,
+    },
+    {
+      id: 2,
+      title: "Projects",
+      Component: <Projects />,
+    },
+    {
+      id: 3,
+      title: "Contact",
+      Component: <ContactMe />,
+    },
+  ]);
+  const [activeTab, setActiveTab] = useState(0);
+
+  useEffect(() => {
+    if (darkMode) {
+      document.body.classList.add("dark-mode");
+    } else {
+      document.body.classList.remove("dark-mode");
+    }
+  }, [darkMode]);
+
+  const handleDarkMode = (value) => {
+    setDarkMode(value);
+  };
 
   return (
-    <>
-      <Header />
-      <main>
-        <div className="flex-row">
-          <Hero
-            avatarUrl={avatar}
-            title="full stack developer"
-            location="Sydney"
-            name="Didier Hategeka"
-            shortDescription="G'day,nice to meet you, I am a fullstack web developer who loves Javascript. I love building websites with next technologies and current ones and I also like reading about new and old web technologies. I catch up quick with new technologies!, contact me, let's build something together ⬇️"
-            email="kdondidier@gmail.com"
-          />
-          <Container title={"my stack"} content={techContent} />
+    <main className="container">
+      <div className="dark-mode-toggler">
+        <input
+          type="checkbox"
+          id="toggler"
+          onChange={(e) => {
+            if (e.target.checked) {
+              handleDarkMode(true);
+            } else {
+              handleDarkMode(false);
+            }
+          }}
+          checked={darkMode}
+        />
+
+        <label htmlFor="toggler" aria-label="toggler for Dark Mode" />
+      </div>
+      <div className="header-section">
+        <div className="header-frame">
+          <h1>Didier Hategekimana</h1>
+          <h2>Software Engineer in Sydney</h2>
+        </div>
+        <div className="gradient-box">
+          <img src={avatar} className="img-frame" alt="Didier Hategekimana" />
+        </div>
+      </div>
+      <section className="tabs-section">
+        <div className="tabs">
+          {tabs.map((tab, index) => (
+            <button
+              key={tab.id}
+              className={index === activeTab ? "tab active-tab" : "tab"}
+              onClick={() => setActiveTab(index)}
+            >
+              {tab.title}
+            </button>
+          ))}
         </div>
 
-        <Projects />
-      </main>
-      <Social />
-    </>
+        <div className="tab-content">
+          {tabs[activeTab] && tabs[activeTab].Component}
+        </div>
+      </section>
+    </main>
   );
 }
