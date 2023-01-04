@@ -44,7 +44,6 @@ a {
   display: inline-block;
   color: var(--blue);
 }
-/* make scroll bar 4px wide */
 ::-webkit-scrollbar {
   width: 4px;
 }
@@ -215,15 +214,54 @@ div.project .links {
   display: flex;
   gap: 1em;
 }
-.tech-list{
+.tech-list {
   display: flex;
   flex-wrap: wrap;
-  /* justify-content: center; */
 }
-.tech-icon{
+.tech-icon {
   width: 30px;
   height: 30px;
   margin: 0.5em;
+}
+.html-abbr,
+.css-abbr,
+.js-abbr,
+.ts-abbr,
+.react-abbr,
+.solid-abbr {
+  position: relative;
+  text-transform: uppercase;
+}
+.html-abbr::after,
+.css-abbr::after,
+.js-abbr::after,
+.ts-abbr::after,
+.react-abbr::after,
+.solid-abbr::after {
+  position: absolute;
+  height: 10px;
+  width: 100%;
+  content: "";
+  left: 0;
+  bottom: 0;
+}
+.html-abbr::after {
+  border-bottom: 2px solid #e34c26;
+}
+.css-abbr::after {
+  border-bottom: 2px solid #264de4;
+}
+.js-abbr::after {
+  border-bottom: 2px solid #f7df1e;
+}
+.ts-abbr::after {
+  border-bottom: 2px solid #3178c6;
+}
+.react-abbr::after {
+  border-bottom: 2px solid #61dafb;
+}
+.solid-abbr::after {
+  border-bottom: 2px solid #ff2d20;
 }
 @media (max-width: 600px) {
   .tabs {
