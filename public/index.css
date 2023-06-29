@@ -8,7 +8,13 @@
   --pink: #eb4888;
   --blue: #10a2f5;
   --yellow: #e9bc3f;
+  /* 404 */
+  --primary-color: #333;
+  --secondary-color: #fff;
 }
+
+
+
 html,
 body {
   margin: 0;
@@ -182,6 +188,8 @@ a {
 .tab-content {
   display: flex;
   flex-direction: column;
+  animation: reveal 0.5s ease-in-out;
+
 }
 .tab-content h2 {
   margin-bottom: 1em;
@@ -192,23 +200,54 @@ a {
   font-weight: 300;
   line-height: 160%;
 }
-div.project {
+ul.projects{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+@keyframes reveal {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .tab-content {
+    animation: none !important;
+  }
+  .tech-icon-container {
+    animation: none !important;
+  }
+}
+li.project {
   display: flex;
   flex-direction: column;
   margin-bottom: 1em;
   border-bottom: 1px solid var(--gray);
   padding: 0.5em 0;
 }
-div.project:last-child {
+li.project:last-child {
   border-bottom: none;
 }
-div.project h3 {
+li.project h3 {
   margin-bottom: 0.5em;
 }
-div.project p {
+li.project p {
   margin-bottom: 0.5em;
 }
-div.project .links {
+li.project .links {
   font-weight: 400;
   font-size: 1rem;
   display: flex;
@@ -276,4 +315,51 @@ div.project .links {
   .header-section {
     justify-content: center;
   }
+}
+
+/*404 page styles*/
+/* styles.css */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --primary-color: #fff;
+    --secondary-color: var(--black);
+  }
+}
+
+
+.container-not-found {
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+  height: 100vh;
+  display: flex;
+  place-items: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.heading {
+  font-size: 48px;
+  margin-bottom: 16px;
+}
+
+.message {
+  font-size: 24px;
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.button {
+  padding: 12px 24px;
+  font-size: 18px;
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: #555;
 }

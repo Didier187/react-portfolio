@@ -20,7 +20,7 @@ export default function Project({ title, description, source, live }) {
     </svg>
   );
   return (
-    <div className="project">
+    <li className="project">
       <h3 className="title">{title}</h3>
       <p className="description">{description}</p>
       <div className="links">
@@ -33,6 +33,6 @@ export default function Project({ title, description, source, live }) {
           </a>
         )}
       </div>
-    </div>
+    </li>
   );
 }

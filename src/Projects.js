@@ -1,8 +1,10 @@
-import React from "react";
+import React, {useRef, useEffect} from "react";
 import Project from "./Project";
+
 import { projects } from "./projectList";
 
 export default function Projects() {
+  
   let content = projects.map((project) => (
     <Project
       key={project.id}
@@ -15,7 +17,7 @@ export default function Projects() {
   return (
     <section className="tab-content">
       <h2 className="project_indicator">projects</h2>
-      <div className="projects">{content}</div>
+      <ul className="projects">{content}</ul>
     </section>
   );
 }

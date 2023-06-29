@@ -12,8 +12,14 @@ export default function Tech(props) {
   return (
     <>
       {imageSrc && (
-        <>
+        <div
+          className="tech-icon-container"
+          style={{
+            animation: `fadeIn ${0.2 * props.index}s ease-in-out`,
+          }}
+        >
           <img
+            loading="lazy"
             className="tech-icon"
             alt={`${tech}`}
             data-for="toolTip"
@@ -22,7 +28,7 @@ export default function Tech(props) {
             src={imageSrc}
           />
           <ReactTooltip id="toolTip" getContent={(dataTip) => `${dataTip}`} />
-        </>
+        </div>
       )}
     </>
   );
