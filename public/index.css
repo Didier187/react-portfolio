@@ -349,17 +349,13 @@ li.project .links {
   margin-bottom: 24px;
 }
 
-.button {
-  padding: 12px 24px;
-  font-size: 18px;
-  background-color: var(--secondary-color);
-  color: var(--primary-color);
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
 
-.button:hover {
-  background-color: #555;
+
+.link {
+  text-decoration: none;
+  color: var(--primary-color);
+  font-size: 18px;
+  padding: 12px 24px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
 }
