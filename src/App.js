@@ -4,7 +4,9 @@ import Projects from "./Projects";
 import ContactMe from "./ContactMe";
 import avatar from "./images/avatar.jpg";
 export default function App() {
-  const [darkMode, setDarkMode] = useState(false);
+  const [darkMode, setDarkMode] = useState(
+    false
+  );
 
   const [tabs, setTabs] = useState([
     {
@@ -32,6 +34,13 @@ export default function App() {
       document.body.classList.remove("dark-mode");
     }
   }, [darkMode]);
+
+  useEffect(() => {
+    const prefersDarkMode = window.matchMedia(
+      "(prefers-color-scheme: dark)"
+    ).matches;
+    setDarkMode(prefersDarkMode);
+  }, []);
 
   const handleDarkMode = (value) => {
     setDarkMode(value);
