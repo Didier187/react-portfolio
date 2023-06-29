@@ -336,17 +336,21 @@ li.project .links {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  text-align: center;
+  padding: 1em;
 }
 
 .heading {
   font-size: 48px;
   margin-bottom: 16px;
+
 }
 
 .message {
   font-size: 24px;
   text-align: center;
   margin-bottom: 24px;
+
 }
 
 
