@@ -1,4 +1,5 @@
 import React from "react";
+import { START_YEAR } from "./data";
 
 export default function About() {
   return (
@@ -6,8 +7,9 @@ export default function About() {
       <h2>About me</h2>
       <p>
         I am a Frontend Engineer with a passion for building intuitive and
-        visually appealing user interfaces. With over 3.5 years of experience in
-        the industry, I have a strong foundation in{" "}
+        visually appealing user interfaces. With{" "}
+        {new Date().getFullYear() - START_YEAR} years of experience in the
+        industry, I have a strong foundation in{" "}
         <strong className="html-abbr"> HTML</strong>,{" "}
         <strong className="css-abbr">CSS</strong>, and{" "}
         <strong className="js-abbr">JavaScript</strong> as well as{" "}

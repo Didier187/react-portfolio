@@ -63,3 +63,4 @@ export const techArr = [
     "handlebars",
     "eslint",
   ];
+  export const START_YEAR = 2019;
