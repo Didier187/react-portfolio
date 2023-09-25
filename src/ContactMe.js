@@ -1,7 +1,7 @@
 import React from "react";
 
 import TechList from "./TechList";
-import { techArr } from "./projectList";
+import { techArr } from "./data";
 
 export default function ContactMe() {
   return (

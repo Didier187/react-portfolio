@@ -4,20 +4,19 @@ import Projects from "./Projects";
 import ContactMe from "./ContactMe";
 import avatar from "./images/avatar.jpg";
 export default function App() {
-  const [darkMode, setDarkMode] = useState(
-    false
-  );
+  const [darkMode, setDarkMode] = useState(false);
+  // ,
+  //   {
+  //     id: 2,
+  //     title: "Projects",
+  //     Component: <Projects />,
+  //   }
 
   const [tabs, setTabs] = useState([
     {
       id: 1,
       title: "About",
       Component: <About />,
-    },
-    {
-      id: 2,
-      title: "Projects",
-      Component: <Projects />,
     },
     {
       id: 3,
@@ -93,5 +92,3 @@ export default function App() {
     </main>
   );
 }
-
-
