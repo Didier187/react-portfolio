@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sections": [
+    {"offset": {"line": 5, "column": 0}, "map": {"version":3,"sources":["/turbopack/[project]/components/Avatar.tsx"],"sourcesContent":["\r\nimport Image from \"next/image\";\r\n\r\nconst Avatar = () => {\r\n  return (\r\n    <Image\r\n      src=\"/avatar.jpg\"\r\n      className=\"img-frame\"\r\n      alt=\"Didier H\"\r\n      width={200}\r\n      height={200}\r\n    />\r\n  );\r\n};\r\n\r\nexport default Avatar;\r\n"],"names":[],"mappings":";;;;;;;;AAGA,MAAM,SAAS;IACb,qBACE;QACE,KAAI;QACJ,WAAU;QACV,KAAI;QACJ,OAAO;QACP,QAAQ;;;;;;AAGd;KAVM;uCAYS"}},
+    {"offset": {"line": 30, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":"A"}}]
+}

@@ -1,34 +1,26 @@
 {
-  "name": "project",
+  "name": "nextjs-portfolio-didier",
+  "version": "0.1.0",
+  "private": true,
   "dependencies": {
+    "next": "^14.0.4",
     "postcss-normalize": "^10.0.1",
-    "react": "17.0.2",
+    "react": "^18",
     "react-bootstrap-icons": "^1.6.1",
-    "react-dom": "17.0.2",
-    "react-router-dom": "^6.14.0",
-    "react-scripts": "^5.0.0",
-    "react-tooltip": "4.2.21"
+    "react-dom": "^18"
   },
   "devDependencies": {
-    "babel-core": "^6.0",
-    "babel-preset-env": "*",
-    "babel-preset-react": "*"
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "eslint": "^8",
+    "eslint-config-next": "14.0.4",
+    "typescript": "^5"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "predeploy": "npm run build",
-    "build": "react-scripts build"
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+    "dev": "next dev --turbo",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
   }
 }
