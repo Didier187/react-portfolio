@@ -62,5 +62,9 @@ export const techArr = [
     "redux",
     "handlebars",
     "eslint",
+    "graphql",
+    "materialui",
+    "nextjs",
+    "storybook",
   ];
-  export const START_YEAR = 2019;
+  export const START_YEAR = 2020;

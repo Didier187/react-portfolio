@@ -1,5 +1,6 @@
-import React from "react";
-import ReactTooltip from "react-tooltip";
+"use client";
+import Image from "next/image";
+import Tooltip from "./Tooltip";
 
 export default function Tech(props) {
   const tech = props.tech;
@@ -18,16 +19,17 @@ export default function Tech(props) {
             animation: `fadeIn ${0.2 * props.index}s ease-in-out`,
           }}
         >
-          <img
-            loading="lazy"
+          <Image
+            onError={addDifferentImg}
             className="tech-icon"
             alt={`${tech}`}
             data-for="toolTip"
             data-tip={tech}
-            onError={addDifferentImg}
             src={imageSrc}
+            width="50"
+            height="50"
           />
-          <ReactTooltip id="toolTip" getContent={(dataTip) => `${dataTip}`} />
+          <Tooltip text={tech}/>
         </div>
       )}
     </>

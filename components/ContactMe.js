@@ -1,7 +1,4 @@
-import React from "react";
-
-import TechList from "./TechList";
-import { techArr } from "./data";
+'use client'
 
 export default function ContactMe() {
   return (
@@ -24,7 +21,7 @@ export default function ContactMe() {
           </p>
         </div>
       </div>
-      <TechList techArr={techArr} />
+      
     </section>
   );
 }

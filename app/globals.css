@@ -8,18 +8,25 @@
   --pink: #eb4888;
   --blue: #10a2f5;
   --yellow: #e9bc3f;
-  /* 404 */
-  --primary-color: #333;
-  --secondary-color: #fff;
 }
-
-
+@media (prefers-color-scheme: dark) {
+  :root {
+    --white: #000;
+    --black: #fff;
+    --gray: #8b8b8b;
+    --highlight: #e5ffc3;
+    --red: #e4002b;
+    --green: #24d05a;
+    --pink: #eb4888;
+    --blue: #10a2f5;
+    --yellow: #e9bc3f;
+  }
+}
 
 html,
 body {
   margin: 0;
   padding: 0;
-  font-family: "Roboto", sans-serif;
 }
 * {
   box-sizing: border-box;
@@ -28,17 +35,10 @@ body {
   background: var(--white);
   color: var(--black);
 }
-body.dark-mode,
-body.dark-mode button,
-body.dark-mode .go-home,
-button.dark-mode,
-button.dark-mode button {
-  background: var(--black);
-  color: var(--white);
-}
+
 img {
-  width: 100%;
   display: block;
+  object-fit: cover;
 }
 p,
 h2,
@@ -75,56 +75,10 @@ a {
 .img-frame {
   position: relative;
   border-radius: 50%;
-  width: 200px;
-  height: 200px;
   object-fit: cover;
+  transition: all 0.2s ease-in-out;
 }
-.dark-mode-toggler {
-  position: fixed;
-  top: 5px;
-  right: 20px;
-}
-.dark-mode-toggler input[type="checkbox"] {
-  display: none;
-}
-.dark-mode-toggler label {
-  position: relative;
-}
-.dark-mode-toggler input[type="checkbox"]:checked + label::before {
-  background: var(--black);
-  border: 2px solid var(--white);
-}
-.dark-mode-toggler input[type="checkbox"] + label::before {
-  content: "";
-  display: block;
-  height: 26px;
-  width: 60px;
-  background: var(--white);
-  border: 2px solid var(--gray);
-  border-radius: 15px;
-  position: absolute;
-  top: 0px;
-  left: -65px;
-}
-.dark-mode-toggler input[type="checkbox"]:checked + label::after {
-  left: -28px;
-  background: var(--black);
-  border: 2px solid var(--white);
-  transition: all 0.4s ease-in;
-}
-.dark-mode-toggler input[type="checkbox"] + label::after {
-  content: "";
-  display: block;
-  height: 20px;
-  width: 20px;
-  background: var(--gray);
-  border: 2px solid var(--white);
-  border-radius: 50%;
-  position: absolute;
-  top: 3px;
-  left: -62px;
-  transition: all 0.4s ease-in;
-}
+
 .container {
   margin: 50px auto;
   padding: 5px;
@@ -132,7 +86,7 @@ a {
 }
 
 .gradient-box {
-  background: linear-gradient(90deg, #1e90ff, #03851d);
+  background: linear-gradient(90deg, var(--yellow), var(--green));
   padding: 4px;
   border-radius: 50%;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
@@ -163,7 +117,7 @@ a {
   cursor: pointer;
   border: 2px solid var(--gray);
   width: 120px;
-  height: 30px;
+  min-height: 30px;
   border-radius: 15px;
   box-sizing: border-box;
   color: var(--black);
@@ -171,6 +125,7 @@ a {
   overflow: auto;
   transition: 0.4s ease all;
   text-transform: capitalize;
+  padding: 0.5em 1em;
 }
 
 .tab + .tab {
@@ -189,7 +144,6 @@ a {
   display: flex;
   flex-direction: column;
   animation: reveal 0.5s ease-in-out;
-
 }
 .tab-content h2 {
   margin-bottom: 1em;
@@ -200,10 +154,28 @@ a {
   font-weight: 300;
   line-height: 160%;
 }
-ul.projects{
+ul.projects {
   list-style: none;
   padding: 0;
   margin: 0;
+}
+.tech-icon-container {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 1em;
+  animation: fadeIn 0.5s ease-in-out;
+  cursor: pointer;
+}
+.tech-icon-container:hover > .tooltip {
+  display: inline-block;
+}
+.tooltip {
+  position: absolute;
+  border-bottom: 1px dotted var(--black);
+  font-size: 13px;
+  display: none;
+  margin-left: 28px;
+  margin-top: -7px;
 }
 @keyframes reveal {
   from {
@@ -326,7 +298,6 @@ li.project .links {
   }
 }
 
-
 .container-not-found {
   background-color: var(--secondary-color);
   color: var(--primary-color);
@@ -343,17 +314,13 @@ li.project .links {
 .heading {
   font-size: 48px;
   margin-bottom: 16px;
-
 }
 
 .message {
   font-size: 24px;
   text-align: center;
   margin-bottom: 24px;
-
 }
-
-
 
 .link {
   text-decoration: none;
@@ -362,4 +329,59 @@ li.project .links {
   padding: 12px 24px;
   border-radius: 4px;
   transition: background-color 0.3s ease;
+}
+
+footer {
+  margin-top: 24px;
+  position: fixed;
+  bottom: 0;
+  padding: 1em;
+  backdrop-filter: blur(4px);
+}
+.social__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+}
+.social_link {
+  display: inline-block;
+  will-change: filter;
+  transition: filter 300ms;
+  /* padding: 1.5em; */
+}
+.social_link.github:hover {
+  filter: drop-shadow(0px 0px 20px blue);
+}
+.social_link.twitter:hover {
+  filter: drop-shadow(0px 0px 20px #1da1f2);
+}
+.social_link.linkedin:hover {
+  filter: drop-shadow(0px 0px 20px #2785e4);
+}
+/* wip */
+.hand {
+  /* border: 2px solid red; */
+  display: inline-block;
+  display: inline-block;
+  /* animation: waving 2s infinite; */
+  margin-bottom: 1em;
+  rotate: 8deg;
+}
+@keyframes waving {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(20deg);
+  }
+  50% {
+    transform: rotate(25deg);
+  }
+  75% {
+    transform: rotate(-20deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
 }
