@@ -1,4 +1,3 @@
-import React, { useRef, useEffect } from "react";
 import Project from "./Project";
 
 import { projects } from "./data";
