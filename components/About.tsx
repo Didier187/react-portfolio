@@ -1,4 +1,3 @@
-import React from "react";
 import { START_YEAR } from "./data";
 import { techArr } from './data';
 import TechList from './TechList';

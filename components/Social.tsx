@@ -1,4 +1,3 @@
-import React from "react";
 import Image from "next/image";
 
 export default function Social() {
@@ -9,16 +8,16 @@ export default function Social() {
           className="social_link linkedin"
           href="https://www.linkedin.com/in/didier-h-66953a211/"
         >
-          <Image src="/linkedin.png" width="24" height="24" />
+          <Image src="/linkedin.png" width="24" height="24" alt="" />
         </a>
         <a className="social_link github" href="https://github.com/Didier187">
-          <Image src="/github-sign.png" width="24" height="24" />
+          <Image src="/github-sign.png" width="24" height="24" alt="" />
         </a>
         <a
           className="social_link twitter"
           href="https://twitter.com/KAMANUTSID"
         >
-          <Image src="/twitter.png" width="24" height="24" />
+          <Image src="/twitter.png" width="24" height="24" alt="" />
         </a>
       </div>
     </section>
