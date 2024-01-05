@@ -8,7 +8,13 @@ import Tabs from "../components/Tabs";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('http://localhost:3000'),
+  metadataBase: new URL('https://www.didier.one'),
+  alternates: {
+    canonical: '/',
+    languages: {
+      'en-US': '/en-US',
+    },
+  },
   title: "Didier H.",
   description:
     "Didier H. | Personal website, Web developer based in Sydney, Australia 💻🌐",
