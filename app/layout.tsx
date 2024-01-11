@@ -4,13 +4,14 @@ import { Inter } from "next/font/google";
 import Social from "../components/Social";
 import Avatar from "../components/Avatar";
 import Tabs from "../components/Tabs";
+import HeaderFrame from "../components/HeaderFrame";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.didier.one'),
   alternates: {
-    canonical: '/',
+    canonical: 'didier.one',
     languages: {
       'en-US': '/en-US',
     },
@@ -47,10 +48,7 @@ export default function RootLayout({
       <body className={inter.className} suppressHydrationWarning={true}>
         <main className="container">
           <div className="header-section">
-            <div className="header-frame">
-              <h1>Didier H.</h1>
-              <h2>Software Engineer in Sydney</h2>
-            </div>
+            <HeaderFrame name="Didier H." role="Software developer in Sydney" />
             <div className="gradient-box">
               <Avatar />
             </div>
