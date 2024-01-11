@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { START_YEAR } from "./data";
 import { techArr } from "./data";
 import Section from "./Section";
@@ -10,7 +11,7 @@ export default function About() {
         <h2>About me</h2>
         <p>
           I am a Frontend Engineer + full stack capabilities with a passion for
-          building intuitive and visually appealing user interfaces. With{" "}
+          building user interfaces. With{" "}
           {new Date().getFullYear() - START_YEAR} years of experience in the
           industry, I have a strong foundation in{" "}
           <strong className="html-abbr"> HTML</strong>,{" "}
@@ -18,7 +19,7 @@ export default function About() {
           <strong className="js-abbr">JavaScript</strong> as well as{" "}
           <strong className="ts-abbr">TypeScript</strong>, and I am skilled in
           modern frameworks such as{" "}
-          <strong className="react-abbr">ReactJs</strong>(library) and{" "}
+          <strong className="react-abbr">ReactJs</strong> and{" "}
           <strong className="solid-abbr">NextJs</strong>.
         </p>
         <p>
@@ -28,14 +29,13 @@ export default function About() {
           responsive and functional interfaces and my attention to detail.
         </p>
         <p>
-          In addition to my technical skills, I am a strong communicator and
-          collaborator. I enjoy working with cross-functional teams and have a
+          In addition to my technical skills, I have strong communication skills. I enjoy working with cross-functional teams and have a
           track record of delivering high-quality work on time.
         </p>
         <p>
-          Thank you for considering me for your frontend development needs. I
-          welcome the opportunity to bring my skills and experience to your
-          project and help bring your vision to life
+          Thank you for visiting my website! I
+          welcome opportunities to collaborate on new projects. Please feel free
+          to contact me <Link href="/contact">here</Link>.
         </p>
       </Section>
       <TechList techArr={techArr} />
