@@ -1,8 +1,8 @@
-'use client'
+import Section from "./Section";
 
 export default function ContactMe() {
   return (
-    <section className="tab-content">
+    <Section className="tab-content">
       <h2>Contact me</h2>
       <div className="contact">
         <div className="contact-info">
@@ -21,7 +21,6 @@ export default function ContactMe() {
           </p>
         </div>
       </div>
-      
-    </section>
+    </Section>
   );
 }

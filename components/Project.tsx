@@ -17,7 +17,15 @@ const ExternalLinkIcon = () => (
     />
   </svg>
 );
-export default function Project({ title, description, source, live }) {
+interface ProjectProps {
+  id: number;
+  title: string;
+  description: string;
+  source: string;
+  live?: string;
+}
+export default function Project(props: ProjectProps) {
+  const { title, description, source, live } = props;
   return (
     <li className="project">
       <h3 className="title">{title}</h3>

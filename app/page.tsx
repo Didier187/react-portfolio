@@ -1,6 +1,8 @@
+import Section from "../components/Section";
+
 export default function Home() {
   return (
-    <div>
+    <Section className="tab-content">
       <h2>
         Hello World <span className="hand">👋</span>!
       </h2>
@@ -12,6 +14,6 @@ export default function Home() {
         and social good. In my free time, I enjoy spending time with my family &
         friends ,riding motocyles, and reading.
       </p>
-    </div>
+    </Section>
   );
 }
