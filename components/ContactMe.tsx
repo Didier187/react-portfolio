@@ -7,17 +7,22 @@ export default function ContactMe() {
       <div className="contact">
         <div className="contact-info">
           <p>
-            Are you looking for a skilled and passionate Frontend Engineer to
-            join your team and help bring your ReactJS projects to life? Look no
-            further! With my strong foundation in modern JavaScript frameworks
-            and a track record of delivering high-quality work on time, I am
-            ready to take on new challenges and contribute to the success of
-            your organization. Contact me to learn more about how I can add
-            value to your team
+            if you are interested in my skills or just want to say hi?
+            Shoot me an email or connect with me on LinkedIn.
           </p>
           <p>
             <span className="bold">Email: </span>
             <a href="mailto:kdondidier@gmail.com">kdondidier@gmail.com</a>
+          </p>
+          <p>
+            <span className="bold">LinkedIn: </span>
+            <a
+              href="https://www.linkedin.com/in/didier-h-66953a211/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Didier H.
+            </a>
           </p>
         </div>
       </div>

@@ -9,11 +9,11 @@ import HeaderFrame from "../components/HeaderFrame";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://www.didier.one'),
+  metadataBase: new URL("https://www.didier.one"),
   alternates: {
-    canonical: 'didier.one',
+    canonical: "didier.one",
     languages: {
-      'en-US': '/en-US',
+      "en-US": "/en-US",
     },
   },
   title: "Didier H.",
@@ -46,16 +46,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className} suppressHydrationWarning={true}>
-        <main className="container">
-          <div className="header-section">
-            <HeaderFrame name="Didier H." role="Software developer in Sydney" />
-            <div className="gradient-box">
-              <Avatar />
-            </div>
-          </div>
-          <Tabs />
-          <div className="tab-content">{children}</div>
-        </main>
+        <main className="container">{children}</main>
         <footer>
           <Social />
         </footer>
