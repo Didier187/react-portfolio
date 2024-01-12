@@ -30,6 +30,7 @@ body {
 }
 * {
   box-sizing: border-box;
+  min-height: 0;
 }
 body {
   background: var(--white);
@@ -80,9 +81,13 @@ a {
 }
 
 .container {
-  margin: 50px auto;
+  margin-inline: auto;
   padding: 5px;
   max-width: 650px;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  min-height: 100dvh;
+  min-height: 100vh;
 }
 
 .gradient-box {
@@ -359,29 +364,72 @@ footer {
 .social_link.linkedin:hover {
   filter: drop-shadow(0px 0px 20px #2785e4);
 }
-/* wip */
-.hand {
-  /* border: 2px solid red; */
-  display: inline-block;
-  display: inline-block;
-  /* animation: waving 2s infinite; */
+/* blog styles */
+.blog-layout-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   margin-bottom: 1em;
-  rotate: 8deg;
+  padding-inline: 1em;
 }
-@keyframes waving {
-  0% {
-    transform: rotate(0deg);
+.blog-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 1em;
+  border-radius: 10px;
+}
+.blog-card h2 {
+  margin-bottom: 0.5em;
+  font-size: 28px;
+}
+.blog-card p {
+  margin-bottom: 0.5em;
+  font-size: 18px;
+  line-height: 160%;
+}
+/* on smaller screen make the paragraph 16px */
+@media (max-width: 600px) {
+  .blog-card p {
+    font-size: 16px;
   }
-  25% {
-    transform: rotate(20deg);
-  }
-  50% {
-    transform: rotate(25deg);
-  }
-  75% {
-    transform: rotate(-20deg);
-  }
-  100% {
-    transform: rotate(0deg);
-  }
+}
+.blog-card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 0.5em;
+}
+.blog-card-footer i {
+  font-size: 13px;
+  color: var(--gray);
+}
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5em;
+}
+.tag {
+  padding: 0.5em 1em;
+  border-radius: 5px;
+  background-color: var(--highlight);
+  color: var(--white);
+  font-size: 14px;
+  font-weight: 400;
+}
+pre {
+  overflow-x: auto;
+  padding: 1rem 0;
+  border-radius: 4px;
+}
+
+pre [data-line] {
+  padding: 0 1rem;
+}
+.blog-content p,
+.blog-content li,
+.blog-content h1 {
+  margin: initial;
 }
