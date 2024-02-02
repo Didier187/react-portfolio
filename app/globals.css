@@ -27,6 +27,7 @@ html,
 body {
   margin: 0;
   padding: 0;
+  color-scheme: light dark;
 }
 * {
   box-sizing: border-box;
@@ -35,6 +36,12 @@ body {
 body {
   background: var(--white);
   color: var(--black);
+  background: rgb(34, 193, 195);
+  background: linear-gradient(
+    0deg,
+    rgba(34, 193, 195, 1) 15%,
+    rgba(41, 11, 36, 1) 92%
+  );
 }
 
 img {
@@ -49,7 +56,7 @@ h3 {
 a {
   text-decoration: none;
   display: inline-block;
-  color: var(--blue);
+  color: var(--yellow);
 }
 ::-webkit-scrollbar {
   width: 4px;
@@ -75,7 +82,7 @@ a {
 }
 .img-frame {
   position: relative;
-  border-radius: 50%;
+  border-radius: 3px;
   object-fit: cover;
   transition: all 0.2s ease-in-out;
 }
@@ -85,15 +92,15 @@ a {
   padding: 5px;
   max-width: 650px;
   padding-top: 3rem;
-  padding-bottom: 3rem;
+  margin-bottom: 2rem;
   min-height: 100dvh;
   min-height: 100vh;
 }
 
 .gradient-box {
-  background: linear-gradient(90deg, var(--yellow), var(--green));
+  /* background: linear-gradient(90deg, var(--yellow), var(--green)); */
   padding: 4px;
-  border-radius: 50%;
+  border-radius: 4px;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
   animation: shimmer 10s infinite;
 }
@@ -123,7 +130,7 @@ a {
   border: 2px solid var(--gray);
   width: 120px;
   min-height: 30px;
-  border-radius: 15px;
+  border-radius: 3px;
   box-sizing: border-box;
   color: var(--black);
   font-size: 1rem;
@@ -131,6 +138,9 @@ a {
   transition: 0.4s ease all;
   text-transform: capitalize;
   padding: 0.5em 1em;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 
 .tab + .tab {
@@ -138,7 +148,9 @@ a {
 }
 .active-tab {
   border-color: var(--blue);
-  color: var(--blue);
+  color: var(--yellow);
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
 }
 .tab:hover {
   border-color: var(--blue);
@@ -233,6 +245,7 @@ li.project .links {
 .tech-list {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
 }
 .tech-icon {
   width: 30px;
@@ -337,10 +350,9 @@ li.project .links {
 }
 
 footer {
-  margin-top: 24px;
   position: fixed;
   bottom: 0;
-  padding: 1em;
+  padding: 0.5em;
   backdrop-filter: blur(4px);
 }
 .social__container {

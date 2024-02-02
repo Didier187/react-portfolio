@@ -2,9 +2,6 @@ import "./globals.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import Social from "../components/Social";
-import Avatar from "../components/Avatar";
-import Tabs from "../components/Tabs";
-import HeaderFrame from "../components/HeaderFrame";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -33,8 +30,20 @@ export const metadata: Metadata = {
     "nodejs",
     "graphql",
     "apollo",
+    "frontend",
+    "backend",
+    "didier",
+    "hategekimana",
+    "didierh",
+    "didier.one",
+    "didier hategekimana",
   ],
-  authors: [{ name: "Didier Hategekimana" }],
+  authors: [
+    {
+      name: "Didier Hategekimana",
+      url: "https://www.linkedin.com/in/didier-h-66953a211/",
+    },
+  ],
   robots: "index,follow",
 };
 
