@@ -42,6 +42,7 @@ body {
     rgba(34, 193, 195, 1) 15%,
     rgba(41, 11, 36, 1) 92%
   );
+  
 }
 
 img {
@@ -94,7 +95,8 @@ a {
   padding-top: 3rem;
   margin-bottom: 2rem;
   min-height: 100dvh;
-  min-height: 100vh;
+  min-height: 100vh;  
+  
 }
 
 .gradient-box {
@@ -103,6 +105,10 @@ a {
   border-radius: 4px;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
   animation: shimmer 10s infinite;
+}
+.gradient-box img{
+ width: 150px;
+ height: 176px;
 }
 
 @keyframes shimmer {
@@ -160,7 +166,8 @@ a {
 .tab-content {
   display: flex;
   flex-direction: column;
-  animation: reveal 0.5s ease-in-out;
+  /* animation: reveal 0.5s ease-in-out; */
+  
 }
 .tab-content h2 {
   margin-bottom: 1em;
