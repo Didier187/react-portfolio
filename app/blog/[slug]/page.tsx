@@ -6,6 +6,7 @@ import remarkParse from "remark-parse";
 import remarkRehype from "remark-rehype";
 import rehypeStringify from "rehype-stringify";
 import rehypePrettyCode from "rehype-pretty-code";
+import Image from 'next/image'
 
 export const generateStaticParams = async () => {
   const entries = await readdir("./public/posts", { withFileTypes: true });
@@ -30,9 +31,9 @@ export default async function page({ params }) {
     .use(rehypeStringify)
     .process(content);
   return (
-    <div>
+    <div className="blog">
       <h1>This is a blog post</h1>
-      {data.title}
+     <Image src={`/assets/${params.slug}.png`} alt="Vercel Logo" width={640} height={200} />
       <br />
       <div className="blog-content">
         <div

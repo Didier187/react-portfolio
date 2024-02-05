@@ -452,3 +452,18 @@ pre [data-line] {
 .blog-content h1 {
   margin: initial;
 }
+figure{
+  margin: 0;
+}
+.blog img{
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+  margin-bottom: 1em;
+}
+.blog-content h2 , .blog-content h3{
+  margin-bottom: 1em;
+}
+.blog-content p{
+  margin-bottom: 1em;
+}
