@@ -7,12 +7,12 @@ export default function ContactMe() {
       <div className="contact">
         <div className="contact-info">
           <p>
-            if you are interested in my skills or just want to say hi?
-            Shoot me an email or connect with me on LinkedIn.
+            Looking to work together or just want to chat? Send me an email
+            or connect on LinkedIn.
           </p>
           <p>
             <span className="bold">Email: </span>
-            <a href="mailto:kdondidier@gmail.com">kdondidier@gmail.com</a>
+            <a href="mailto:sturdy-equal-booth@duck.com">sturdy-equal-booth@duck.com</a>
           </p>
           <p>
             <span className="bold">LinkedIn: </span>

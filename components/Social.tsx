@@ -11,11 +11,6 @@ const socialLinks = [
     url: "https://github.com/Didier187",
     icon: "/github-sign.png",
   },
-  {
-    name: "Twitter",
-    url: "https://twitter.com/KAMANUTSID",
-    icon: "/twitter.png",
-  },
 ];
 const MyFancyLink = ({ link }) => {
   return (

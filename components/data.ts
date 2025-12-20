@@ -1,70 +1,92 @@
-export const projects=[
-    {   
-        id:1,
-        title:"e-commerce react",
-        description:"key technologies used [ReactJs,JSX, Context API,hooks, functional components and react-router-dom] ",
-        source:"https://github.com/Didier187/e-commerce-react-app/tree/master/src",
-        live:"https://picsum.netlify.app/"
-    },{
-        id:2,
-        title:"movie search app",
-        description:"key technologies used [ReactJS,JSX,Functional component UseState, UseEffect, CSS, movie API]",
-        source:"https://github.com/Didier187/MovieSearchApp",
-        live:"https://nifty-morse-34a6e3.netlify.app/"
-    },{
-        id:3,
-        title:"movie rental API",
-        description:"key technologies [nodejs, NPM, Javascript,JSON, HEROKU, Postman], api to manage movie rental with authentication and authorisation",
-        source:"https://github.com/Didier187/vidly"
-    },
-    {
-        id:4,
-        title:"Speed typing game",
-        description:"Simple game to test how fast you can type in 30 seconds build with [ReactJs,Functional components,react hooks, custom hooks,CSS3 and Javascript",
-        source:"https://github.com/Didier187/SpeedTypingGame",
-        live:"https://unruffled-poitras-80d181.netlify.app/"
-    },
-    {
-        id:5,
-        title:"password generator app",
-        description:"A web app to generate stion passwords build with [Javascript, HTML5, CSS3",
-        source:"https://github.com/Didier187/passwordGenApp",
-        live:"https://didier187.github.io/passwordGenApp/"
-    },
-    {
-        id:6,
-        title:"task manager API",
-        description:"API to manage tasks, create task offers, accept offers and create task assignments key technologies [NPM, NodeJs, Javascript,JSON Postman]",
-        source:"https://github.com/Didier187/ODD-JOBS-API"
-        
-    }
-]
+export const projects = [
+  {
+    id: 1,
+    title: "E-Commerce Store",
+    description:
+      "Full-featured shopping app built with React, Context API, and React Router for state management and navigation.",
+    source: "https://github.com/Didier187/e-commerce-react-app/tree/master/src",
+    live: "https://picsum.netlify.app/",
+  },
+  {
+    id: 2,
+    title: "Movie Search App",
+    description:
+      "Search and discover movies using a third-party API. Built with React hooks and clean CSS.",
+    source: "https://github.com/Didier187/MovieSearchApp",
+    live: "https://nifty-morse-34a6e3.netlify.app/",
+  },
+  {
+    id: 3,
+    title: "Movie Rental API",
+    description:
+      "RESTful API for managing movie rentals with authentication and authorization. Built with Node.js and deployed on Heroku.",
+    source: "https://github.com/Didier187/vidly",
+  },
+  {
+    id: 4,
+    title: "Speed Typing Game",
+    description:
+      "Test your typing speed in 30 seconds. Built with React and custom hooks.",
+    source: "https://github.com/Didier187/SpeedTypingGame",
+    live: "https://unruffled-poitras-80d181.netlify.app/",
+  },
+  {
+    id: 5,
+    title: "Password Generator",
+    description:
+      "Generate strong passwords with customizable options. Vanilla JavaScript, HTML, and CSS.",
+    source: "https://github.com/Didier187/passwordGenApp",
+    live: "https://didier187.github.io/passwordGenApp/",
+  },
+  {
+    id: 6,
+    title: "Task Manager API",
+    description:
+      "API for managing tasks and assignments. Users can create offers, accept tasks, and track progress. Built with Node.js.",
+    source: "https://github.com/Didier187/ODD-JOBS-API",
+  },
+];
 
-export const techArr = [
-    "typescript",
-    "mongodb",
-    "express",
-    "react",
-    "nextjs",
-    "nodejs",
-    "javascript",
-    "html5",
-    "css3",
-    "sass",
-    "bootstrap",
-    "markdown",
-    "heroku",
+export const techStack = {
+  Languages: ["javascript", "typescript", "html5", "css3"],
+  Frontend: ["react", "nextjs", "redux", "tailwindcss", "sass", "materialui"],
+  "Backend & APIs": ["nodejs", "express", "graphql", "firebase"],
+  Database: ["mongodb", "mysql", "postgresql"],
+  "Testing & Tools": [
+    "jest",
+    "playwright",
+    "docker",
     "github",
     "vscode",
-    "google",
-    "firebase",
-    "jest",
-    "redux",
-    "handlebars",
     "eslint",
-    "graphql",
-    "materialui",
-    "nextjs",
+    "vercel",
     "storybook",
-  ];
-  export const START_YEAR = 2020;
+    "postman",
+  ],
+};
+
+// Legacy export for backward compatibility
+export const techArr = [
+  "typescript",
+  "javascript",
+  "react",
+  "nextjs",
+  "nodejs",
+  "html5",
+  "css3",
+  "sass",
+  "tailwindcss",
+  "mongodb",
+  "express",
+  "graphql",
+  "redux",
+  "jest",
+  "github",
+  "vscode",
+  "firebase",
+  "vercel",
+  "eslint",
+  "materialui",
+  "storybook",
+];
+export const START_YEAR = 2019;
