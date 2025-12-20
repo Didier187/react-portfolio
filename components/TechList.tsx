@@ -1,6 +1,12 @@
 import Tech from "./Tech";
 
-export default function TechList({ techStack }) {
+interface TechListProps {
+  techStack: {
+    [category: string]: string[];
+  };
+}
+
+export default function TechList({ techStack }: TechListProps) {
   return (
     <>
       <h2>Tech Stack</h2>
