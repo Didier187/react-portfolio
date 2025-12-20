@@ -4,6 +4,7 @@ import { Inter } from "next/font/google";
 import Social from "../components/Social";
 import ThemeToggle from "../components/ThemeToggle";
 import MouseGlow from "../components/MouseGlow";
+import { Analytics } from "@vercel/analytics/next";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -63,6 +64,7 @@ export default function RootLayout({
         <footer>
           <Social />
         </footer>
+        <Analytics />
       </body>
     </html>
   );
